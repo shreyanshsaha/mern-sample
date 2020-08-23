@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Axios from 'axios';
+
+
+Axios.defaults.baseURL = window.location.protocol + "//" + window.location.hostname + ":5000";
+Axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 ReactDOM.render(
   <React.StrictMode>
